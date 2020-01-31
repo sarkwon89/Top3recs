@@ -4,12 +4,14 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
 var session = require("express-session");
+var compression = require("compression")
 require('dotenv').config();
 
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+app.use(compression());
 
 var exphbs = require("express-handlebars");
 var foo = {
