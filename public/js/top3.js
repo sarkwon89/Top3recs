@@ -5,7 +5,7 @@ $(document).ready(function () {
             uploadPreset: 'yb5bx9uo'
         }, (error, result) => {
             if (!error && result && result.event === "success") {
-                console.log('Done! Here is the image info: ', result.info);
+                // console.log('Done! Here is the image info: ', result.info);
                 //create an ajax call to send result.info.url to table of user as profileurl .
                 $.ajax("/profile/setprofileurl", {
                     type: "POST",
@@ -14,7 +14,7 @@ $(document).ready(function () {
                     }
                 }).then(
                     function () {
-                        console.log("created url route for profile picture");
+                        // console.log("created url route for profile picture");
                         alert("Hitting top3.js code");
                         // Reload the page to get picture.
                         location.reload();
@@ -23,15 +23,15 @@ $(document).ready(function () {
             
         });
         myWidget.open();
-        console.log("hi");
+        // console.log("hi");
     });
 
 
     $('.carousel').carousel();
 
     $('.deleteBtn').on("click", function () {
-        console.log(this);
-        console.log(this.id);
+        // console.log(this);
+        // console.log(this.id);
         $.ajax("/profile/delete", {
             type: "POST",
             data: {

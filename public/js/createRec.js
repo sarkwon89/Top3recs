@@ -5,14 +5,14 @@ $(document).ready(function () {
     $("#category-select").on("change", event => {
         const catToSearch = event.target.value;
         $.get(`/rec/grablist/${catToSearch}`).then(data => {
-            console.log(data);
+            // console.log(data);
             $('#product-one').empty();
             $("#product-one").append("<option>----------</option>")
             $("#product-one").append("<option id='create1'>Create Product</option>")
 
             data.forEach(product => {
                 const prodOption = $(`<option name=${product.p_name} value=${product.id}>${product.p_name}</option>`);
-                console.log(product);
+                // console.log(product);
                 $("#product-one").append(prodOption);
             })
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
         //when user selects "create product" append an input element so user can create new product
         // document.getElementById("create1").value
         let test = event.target.value
-        console.log(test)
+        // console.log(test)
         if (test === "Create Product") {
             let inputEl = $(`<input type="text" id="newProduct1" placeholder="Enter Product"><button id="btn1">Add Product</button>`)
             $("#createProductOne").prepend(inputEl)
@@ -59,7 +59,7 @@ $(document).ready(function () {
                 data: newProd
             }).then(
                 function () {
-                    console.log("created new product");
+                    // console.log("created new product");
                     // Reload the page to get the updated list
                     location.reload();
                 }
@@ -77,7 +77,7 @@ $(document).ready(function () {
         //when user selects "create product" append an input element so user can create new product
         // document.getElementById("create1").value
         let test = event.target.value
-        console.log(test)
+        // console.log(test)
         if (test === "Create Product") {
             let inputEl = $(`<input type="text" id="newProduct2" placeholder="Enter Product"><button id="btn2">Add Product</button>`)
             $("#createProductTwo").prepend(inputEl)
@@ -98,7 +98,7 @@ $(document).ready(function () {
                 data: newProd
             }).then(
                 function () {
-                    console.log("created new product");
+                    // console.log("created new product");
                     // Reload the page to get the updated list
                     location.reload();
                 }
@@ -113,7 +113,7 @@ $(document).ready(function () {
         //when user selects "create product" append an input element so user can create new product
         // document.getElementById("create1").value
         let test = event.target.value
-        console.log(test)
+        // console.log(test)
         if (test === "Create Product") {
             let inputEl = $(`<input type="text" id="newProduct3" placeholder="Enter Product"><button id="btn3">Add Product</button>`)
             $("#createProductThree").prepend(inputEl)
@@ -134,7 +134,7 @@ $(document).ready(function () {
                 data: newProd
             }).then(
                 function () {
-                    console.log("created new product");
+                    // console.log("created new product");
                     // Reload the page to get the updated list
                     location.reload();
                 }
@@ -160,13 +160,13 @@ $(document).ready(function () {
         let productThreeId = $("#product-three").val().trim();
         let commentThree = document.getElementById("comment-three").value;
 
-        console.log(listid);
-        console.log(productOneId);
-        console.log(commentOne);
-        console.log(productTwoId);
-        console.log(commentTwo);
-        console.log(productThreeId);
-        console.log(commentThree);
+        // console.log(listid);
+        // console.log(productOneId);
+        // console.log(commentOne);
+        // console.log(productTwoId);
+        // console.log(commentTwo);
+        // console.log(productThreeId);
+        // console.log(commentThree);
 
 
         let recOne = {
@@ -200,7 +200,7 @@ $(document).ready(function () {
             }
         }).then(
             function () {
-                console.log("created new recommendation");
+                // console.log("created new recommendation");
                 // Reload the page to get the updated list
                 location.reload();
             }

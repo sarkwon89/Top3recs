@@ -7,7 +7,7 @@ $(document).ready(function () {
         // console.log(catImg)
         // console.log(`userRec/grabuser/${userCatToSearch}`)
         $.get(`userRec/grabuser/${userCatToSearch}`).then(data => {
-            console.log(data)
+            // console.log(data)
 
             //stores data while user is browsing can hold on  to the data page to page
             sessionStorage.setItem("allUserData", JSON.stringify(data));
@@ -54,10 +54,10 @@ $(document).ready(function () {
         // let userName 
         // let userImg
         let listId = event.target.value;
-        console.log(listId)
+        // console.log(listId)
 
         $.get(`userrec/grablistproduct/${listId}`).then(data => {
-            console.log(data)
+            // console.log(data)
 
             // //stores data while user is browsing can hold on  to the data page to page
             sessionStorage.setItem("indUser", JSON.stringify(data));
