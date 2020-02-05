@@ -1,8 +1,7 @@
-
 {
-  "name": "Top3recs",
+  "name": "top3recs",
   "version": "1.0.0",
-  "description": "This will be our read me",
+  "description": "Top 3 is a web application that allows users to view or share recommendations to help people discover new products and experiences.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/sarkwon89/Top3recs.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
